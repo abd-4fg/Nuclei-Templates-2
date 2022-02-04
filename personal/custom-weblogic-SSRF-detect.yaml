@@ -9,8 +9,8 @@ info:
 requests:
         - method: GET
           path:
-                  - "{{BaseURL}}/uddiexplorer/SearchPublicRegistries.jsp"
+                  - "{{BaseURL}}/uddiexplorer/SearchPublicRegistries.jsp?operator=http://127.0.0.1:7001&rdoSearch=name&txtSearchname=&txtSearchkey=&txtSearchfor=&selfor=Business+location&btnSubmit=Search"
           matchers:
                   - type: word
                     words:
-                            - "<title>Search public registries</title>"
+                            - "weblogic.uddi.client.structures.exception.XML_SoapException:"
