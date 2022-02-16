@@ -1,0 +1,26 @@
+id: custom-AEM-ACPV
+
+info:
+  name: Custom-AEM-ACPV
+  author: 0xParthJ
+  severity: low
+  tags: exposure,files,logs
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/etc.clientlibs/dam/clientlibs/assetinsights/pagetracker.js"
+
+    matchers-condition: and
+    matchers:
+
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        words:
+          - "httpd/unix-directory"
+
+        part: header
+        condition: and
