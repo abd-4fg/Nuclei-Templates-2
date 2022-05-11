@@ -13,4 +13,4 @@ requests:
            matchers:
                    - type: word
                      words:
-                             - "<listener-class>psft.pt8.pslistener</listener-class>"
+                             - "<welcome-file>index.html</welcome-file>"
